@@ -1,1 +1,1 @@
-123
+cannot switch from automatic field numbering to manual field specification

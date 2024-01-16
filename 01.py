@@ -71,4 +71,5 @@ def python_03():
     print("输入[" + ipt + "]结束")
     abs(-1)
 
-python_03()
+
+# python_03()
