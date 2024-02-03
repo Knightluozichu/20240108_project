@@ -7,13 +7,21 @@
 """
 
 
-def isItAnArmstrongNumber(x):
-    sNum = str(x)
-    sLen = len(sNum)
+def isItAnArmstrongNumber(num):
+    order = len(str(num))
     sum = 0
-    for i in range(sLen):
-        sum += int(sNum[i]) ** sLen
-    return sum == x
+    temp = num
+    while temp > 0:
+        digit = temp % 10
+        sum += digit**order
+        temp //= 10
+    return num == sum
+
+
+def is_armstrong_number(number):
+    digits = list(map(int, str(number)))
+    n = len(digits)
+    return sum(digit ** n for digit in digits) == number
 
 
 def verificationIsItAnArmstrongNumber():
@@ -60,9 +68,7 @@ def formatRearrange(nums, n):
 
 # print(formatRearrange([2, 5, 1, 3, 4, 7], 3))
 def verificationFormatRearrange(nums, n, vNums):
-    print(
-        f"""输入: nums = {nums}, n = {n}\n输出:{formatRearrange(nums,n) == vNums}\n"""
-    )
+    print(f"""输入: nums = {nums}, n = {n}\n输出:{formatRearrange(nums,n) == vNums}\n""")
 
 
 def testVerificationFormatRearrange():
